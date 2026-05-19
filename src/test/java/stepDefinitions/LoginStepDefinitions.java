@@ -10,10 +10,10 @@ import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
 import pages.LoginPage;
-import util.Runner;
+import util.RunnerTest;
 
 public class LoginStepDefinitions extends LoginPage {
-	private WebDriver driver = Runner.getDriver();
+	private WebDriver driver = RunnerTest.getDriver();
 
 	@Dado("que eu acesse o site da Swag Labs")
 	public void que_eu_acesse_o_site_da_swag_labs() {

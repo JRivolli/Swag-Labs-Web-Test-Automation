@@ -5,11 +5,11 @@ import static util.ScreenShot.captureScreenshot;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import util.Runner;
+import util.RunnerTest;
 
 
 public class LoginPage {
-	protected WebDriver driver = Runner.getDriver();
+	protected WebDriver driver = RunnerTest.getDriver();
 	
 	protected By inputUSerName = By.id("user-name");
 	protected By inputPassword = By.id("password");

@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import stepDefinitions.Hooks;
 
 public class ScreenShot {
-	private WebDriver driver = Runner.getDriver();
+	private WebDriver driver = RunnerTest.getDriver();
 	
 	/** Screenshot com realce de um elemento */
 	public static byte[] captureScreenshot(WebDriver driver, By by) {

@@ -5,10 +5,10 @@ import static util.ScreenShot.captureScreenshot;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import util.Runner;
+import util.RunnerTest;
 
 public class HomePage {
-	protected WebDriver driver = Runner.getDriver();
+	protected WebDriver driver = RunnerTest.getDriver();
 
 	protected By homePageLogo = By.className("app_logo");
 	protected By btnOpenMenu = By.id("react-burger-menu-btn");

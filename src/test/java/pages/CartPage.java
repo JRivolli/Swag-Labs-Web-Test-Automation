@@ -5,19 +5,19 @@ import static util.ScreenShot.captureScreenshot;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import util.Runner;
+import util.RunnerTest;
 
 public class CartPage {
-	protected WebDriver driver = Runner.getDriver();
+	protected WebDriver driver = RunnerTest.getDriver();
 	
 	protected By cartItemName = By.className("inventory_item_name");
 	protected By btnCart = By.className("shopping_cart_link");
 	protected By btnCheckout = By.id("checkout");
 	protected By inputFirstName = By.id("first-name");
 	protected By inputLastName = By.id("last-name");
-	protected By inputPostalcode = By.id("postal-code");
+	protected By inputPostalCode = By.id("postal-code");
 	protected By btnContinue = By.id("continue");
-	protected By btnfinish = By.id("finish");
+	protected By btnFinish = By.id("finish");
 	protected By orderConfirmation = By.className("complete-header");
 	protected By orderConfirmationText = By.className("complete-text");
 	protected By errorMessage = By.xpath("//*[@data-test=\"error\"]  ");
@@ -31,7 +31,7 @@ public class CartPage {
 	}
     
     public By buscarProdutoNoCarrinho(String product) {
-		
+
 		By cartItem = By.xpath("//*[@class=\"inventory_item_name\" and contains(text(), \"" + product + "\")]");
 		return cartItem;
     			
@@ -52,7 +52,7 @@ public class CartPage {
 		driver.findElement(btnCheckout).click();
 		driver.findElement(inputFirstName).sendKeys(firstName);
 		driver.findElement(inputLastName).sendKeys(lastName);
-		driver.findElement(inputPostalcode).sendKeys(postalCode);
+		driver.findElement(inputPostalCode).sendKeys(postalCode);
 		captureScreenshot(driver, btnContinue);
 		driver.findElement(btnContinue).click();
 					
@@ -60,8 +60,8 @@ public class CartPage {
     
     public void finalizarCompra() { 
     	
-    	captureScreenshot(driver, btnfinish);
-    	driver.findElement(btnfinish).click();
+    	captureScreenshot(driver, btnFinish);
+    	driver.findElement(btnFinish).click();
     	
     }
     

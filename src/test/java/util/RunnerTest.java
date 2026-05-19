@@ -17,13 +17,14 @@ import io.cucumber.junit.CucumberOptions;
 		glue = "stepDefinitions", 
 		tags = "@Login")
 
-public class Runner {
+public class RunnerTest {
 	public static WebDriver driver;
 
 	@BeforeClass
 	public static void setup() {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--guest");
+//		options.addArguments("--headless");
 
 		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
