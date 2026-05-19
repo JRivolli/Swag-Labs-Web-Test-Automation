@@ -14,7 +14,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import stepDefinitions.Hooks;
 
 public class ScreenShot {
-	private WebDriver driver = RunnerTest.getDriver();
 	
 	/** Screenshot com realce de um elemento */
 	public static byte[] captureScreenshot(WebDriver driver, By by) {
@@ -78,9 +77,5 @@ public class ScreenShot {
 		return screenshot;
 
 	}
-	
-	public WebElement waitForElementToAppear(By locator, Duration timeoutInSeconds) {
-		WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
-		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-	}
+
 }

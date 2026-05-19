@@ -23,7 +23,7 @@ Funcionalidade: Efetuar login
     Entao valido a mensagem de erro "usuario requerido"
 
   @LoginCampoSenhaVazio
-  Cenario: CT04 - Reliazar login com campo senha vazio
+  Cenario: CT04 - Realizar login com campo senha vazio
     Quando tento logar com o campo "senha" vazio
     Entao valido a mensagem de erro "senha requerida"
 
