@@ -14,7 +14,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		plugin = {"summary", "pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}, 
 		features = "src/test/java/features", 
-		glue = "stepDefinitions", 
+		glue = {"stepDefinitions", "util"},
 		tags = "@Login")
 
 public class RunnerTest {
