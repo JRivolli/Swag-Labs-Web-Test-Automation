@@ -15,7 +15,7 @@ import io.cucumber.junit.CucumberOptions;
 		plugin = {"summary", "pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}, 
 		features = "src/test/java/features", 
 		glue = "stepDefinitions", 
-		tags = "@Login")
+		tags = "@LoginValido")
 
 public class RunnerTest {
 	public static WebDriver driver;
@@ -24,7 +24,7 @@ public class RunnerTest {
 	public static void setup() {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--guest");
-//		options.addArguments("--headless");
+//		options.addArguments("--headless=new");
 
 		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
