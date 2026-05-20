@@ -1,7 +1,6 @@
 package util;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import org.junit.*;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,7 +13,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		plugin = {"summary", "pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}, 
 		features = "src/test/java/features", 
-		glue = "stepDefinitions", 
+		glue = {"stepDefinitions", "util"},
 		tags = "@Login")
 
 public class RunnerTest {
@@ -24,7 +23,7 @@ public class RunnerTest {
 	public static void setup() {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--guest");
-//		options.addArguments("--headless");
+//		options.addArguments("--headless=new");
 
 		driver = new ChromeDriver(options);
 		driver.manage().window().maximize();

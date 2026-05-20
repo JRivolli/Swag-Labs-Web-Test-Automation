@@ -1,7 +1,6 @@
-package stepDefinitions;
+package util;
 
-import io.cucumber.java.Before;
-import io.cucumber.java.Scenario;
+import io.cucumber.java.*;
 
 public class Hooks {
 	public static Scenario scenario;
